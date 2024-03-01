@@ -11,7 +11,16 @@
    - [TransactionReceipt](https://docs.ethers.org/v6/api/providers/#TransactionReceipt)
    - 
 
-2.
+2. deploy contract
+   - [ContractFactory](https://docs.ethers.org/v6/api/contract/#ContractFactory)
+   > 从获取编译后的合约JSON中获取实例化合约的abi/bytecode
+   > contracts/artifacts/MyToken.json
+
+   > without constructor params
+   > 参数可能在合约中已经写死了
+   > const contractERC20 = await factoryERC20.deploy()
+   > with constructor params
+   > 参数要与合约中的构造函数参数一一对应
 
 
 TODO:
