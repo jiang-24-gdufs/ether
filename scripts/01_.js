@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import { config } from 'dotenv';
-console.log(ethers);
+// console.log(ethers);
 config();
 async function main() {
   // Configuring the connection to an Ethereum node
@@ -14,13 +14,13 @@ async function main() {
 
   // Creating and calling the transaction object
   const callTx = await signer.call({
-    to: "0x40f4B71a599851a4b5f28913F5F7aAD967D7C704",
-    value: ethers.parseUnits("0.001", "ether"),
+    to: "0x876612e30c9E928701a2FDD639C663B368ff6A95",
+    value: ethers.parseUnits("0.0001", "ether"),
   });
   console.log("Calling transaction...", callTx);
   // Creating and sending the transaction object
   const tx = await signer.sendTransaction({
-    to: "0x40f4B71a599851a4b5f28913F5F7aAD967D7C704",
+    to: "0x876612e30c9E928701a2FDD639C663B368ff6A95",
     value: ethers.parseUnits("0.001", "ether"),
   });
   console.log("Mining transaction...");
